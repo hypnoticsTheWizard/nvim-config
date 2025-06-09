@@ -26,8 +26,20 @@ vim.lsp.config('*', {
   root_markers = { '.git' },
 })
 
+
+vim.lsp.enable({
+  -- Base config sourced from lspconfig
+  "lua_ls",
+  "rust_analyzer",
+  "bash_ls",
+  "jdtls",
+  "merlin",
+  -- My configurations
+  "clangd",
+})
+
 --[[ general todo block
 -- TODO: Create a TODO highlight and project finder (if lsp get project root else use cwd)
 -- TODO: Add icons for whichkey items (ex: ocaml icon for ocaml only items)
--- TODO: Update lsp for new api and migrate from nvim-cmp to blink
+-- TODO: migrate from nvim-cmp to blink
 --]]
