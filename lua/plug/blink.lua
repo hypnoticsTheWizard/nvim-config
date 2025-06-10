@@ -35,6 +35,7 @@ return {
         ['<C-h>'] = { 'snippet_backward', 'fallback_to_mappings' },
 
         ['<C-f>'] = { 'select_and_accept', 'fallback_to_mappings' },
+        ['<M-g>'] = { 'cancel', 'fallback_to_mappings' },
 
         ['<M-d>'] = { 'show_documentation', 'hide_documentation', 'fallback_to_mappings' },
         ['<C-u>'] = { 'scroll_documentation_up', 'fallback_to_mappings' },

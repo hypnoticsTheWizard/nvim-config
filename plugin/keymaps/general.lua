@@ -5,3 +5,4 @@ local map = helper.map
 map("n", "<leader>w", ":write<CR>", "[W]rite Buffer")
 map("n", "<leader>fc", ":!wl-copy < %<CR>", "[F]ile [C]opy")
 map("v", "<leader>rc", '"+yy', "[R]ange [C]opy")
+map("n", "<Esc>", "<cmd>nohlsearch<CR>", "Removes search highlight")

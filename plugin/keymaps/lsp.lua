@@ -28,7 +28,7 @@ vim.api.nvim_create_autocmd('LSPAttach', {
 
     map("n", "<leader>e", vim.diagnostic.open_float, "[E]rror Message")
 
-    -- TODO: customis format opts
+    -- TODO: customise format opts
     map("n", "gcf", buf.format, "[C]ode [F]ormat (LSP)")
     map("n", "gch", buf.signature_help, "[C]ode Signature [H]elp")
     map("n", "gd", buf.definition, "[G]oto [D]efinition")
@@ -38,6 +38,8 @@ vim.api.nvim_create_autocmd('LSPAttach', {
     map("n", "gcd", function () buf.definition({loclist=true}) end, "[C]ode [D]efinitions to LOCL")
     map("n", "gcs", function () buf.document_symbol({loclist=true}) end, "[C]ode [S]ymbols to LOCL")
     map("n", "gcw", function () buf.workspace_symbol(nil,{loclist=true}) end, "[C]ode [W]orkspace Symbols to QFXL")
+
+    map("i", "M-g", function () vim.snippet.stop()end, "Exits snippet")
 
     local client = vim.lsp.get_client_by_id(event.data.client_id)
     if client and client.server_capabilities.inlayHintProvider and lsp.inlay_hint then
