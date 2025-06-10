@@ -4,7 +4,6 @@ local nv = { "n", "v" }
 -- Side Scroller
 hydra({
   name = "Side scroll",
-  
 
   -- Vim mode
   mode = nv,

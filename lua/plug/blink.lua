@@ -15,6 +15,7 @@ return {
             -- See the configuration section for more details
             -- Load luvit types when the `vim.uv` word is found
             { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+            "nvim-dap-ui",
           },
         },
       },
@@ -94,7 +95,7 @@ return {
         documentation = { auto_show = true },
 
         list = {
-          selection = { preselect = false, auto_insert = true },
+          selection = { preselect = true, auto_insert = false },
         },
 
         accept = {
