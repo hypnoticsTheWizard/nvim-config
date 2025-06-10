@@ -17,13 +17,8 @@ require("lazy").setup({
 local lsp = require("helpers.lsp")
 
 vim.lsp.config('*', {
-  capabilities = lsp.get_lsp_snippets({
-    textDocument = {
-      semanticTokens = {
-        multilineTokenSupport = true, }
-    }
-  }),
   root_markers = { '.git' },
+  capabilities = require("blink.cmp").get_lsp_capabilities(),
 })
 
 
